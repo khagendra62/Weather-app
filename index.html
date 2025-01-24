@@ -10,7 +10,7 @@
     <div id="container">
       <div class="topdiv">
         <input type="text" class="search" placeholder="Enter name of city." />
-        <button class="search-btn">
+        <button id="searchBtn" class="search-btn">
           <img class="search-btn-img" src="./assets/images/search.png" />
         </button>
       </div>
@@ -39,18 +39,19 @@
           <span>
             <img class="wind-img" src="./assets/images/wind.png" />
             <h3>Wind</h3>
-            <h3 id="windSpeed">0km/h</h3>
+            <h3 id="windSpeed">0m/s</h3>
           </span>
           <span>
             <img
               class="precipitation-img"
               src="./assets/images/precipitation.png"
             />
-            <h3>Precipitation</h3>
-            <h3 id="precipitationPercentage">0%</h3>
+            <h3>Pressure</h3>
+            <h3 id="pressureValue">0 mm of Hg</h3>
           </span>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
