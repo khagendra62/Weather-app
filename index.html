@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="topdiv">
+        <input type="text" class="search" placeholder="Enter name of city." />
+        <button class="search-btn">
+          <img
+            class="search-btn-img"
+            src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png"
+          />
+        </button>
+      </div>
+
+      <div class="weather-info">
+        <div class="temp-display">
+          <span>
+            <img
+              class="weather-info-img"
+              src="https://cdn-icons-png.flaticon.com/512/7133/7133364.png"
+            />
+          </span>
+          <span>
+            <h3 class="day-info">Tomorrow</h3>
+            <h1 class="temp-info">28<sup>o</sup>C</h1>
+            <h2 class="peak-temp-info">8<sup>o</sup>C / 38<sup>o</sup>C</h2>
+            <p class="weather-status">Cloudy</p>
+          </span>
+        </div>
+        <div class="extra-display">
+          <span>
+            <img
+              class="humidity-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdkfnW0dCzIbiK904-YkIShpMOvfTcns-tWw&s"
+            />
+            <h3>Humidity</h3>
+            <h3 humidity-info>48%</h3>
+          </span>
+
+          <span>
+            <img
+              class="wind-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0vN4n8XSwHC5001wSngnrWbNNx6NusWvwZg&s"
+            />
+            <h3>Wind</h3>
+            <h3 wind-info>8km/h</h3>
+          </span>
+          <span>
+            <img
+              class="precipitation-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoWziYKGv66bWRxba2GiDkYEZzT1DXArshvg&s"
+            />
+            <h3>Precipitation</h3>
+            <h3 precipitation-info>60%</h3>
+          </span>
+        </div>
+      </div>
+
+      <div class="week-temp-info">
+        <p class="this-week">This Week</p>
+        <table>
+          <tr>
+            <th>Day</th>
+            <th>Peak Temperature</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td class="day-of-this-week">Monday</td>
+            <td class="day-peak-temp">8<sup>o</sup>C / 38<sup>o</sup>C</td>
+            <td>
+              <img
+                class="day-status-icon"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoWziYKGv66bWRxba2GiDkYEZzT1DXArshvg&s"
+              />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
