@@ -21,23 +21,25 @@
             <img class="weather-info-img" src="./assets/images/cloudy.png" />
           </span>
           <span>
-            <h3 class="day-info">Tomorrow</h3>
-            <h1 class="temp-info">28<sup>o</sup>C</h1>
-            <h2 class="peak-temp-info">8<sup>o</sup>C / 38<sup>o</sup>C</h2>
-            <p class="weather-status">Cloudy</p>
+            <h3 id="weatherMain" class="weather-main">Loading</h3>
+            <h1 id="temperatureValue" class="temp-info">0&deg;C</h1>
+            <h2 id="temperatureMinMax" class="peak-temp-info">
+              0&deg;C / 0&deg;C
+            </h2>
+            <p id="weatherStatus" class="weather-status">loading</p>
           </span>
         </div>
         <div class="extra-display">
           <span>
             <img class="humidity-img" src="./assets/images/humidity.png" />
             <h3>Humidity</h3>
-            <h3 humidity-info>48%</h3>
+            <h3 id="humidityPercentage">0%</h3>
           </span>
 
           <span>
             <img class="wind-img" src="./assets/images/wind.png" />
             <h3>Wind</h3>
-            <h3 wind-info>8km/h</h3>
+            <h3 id="windSpeed">0km/h</h3>
           </span>
           <span>
             <img
@@ -45,7 +47,7 @@
               src="./assets/images/precipitation.png"
             />
             <h3>Precipitation</h3>
-            <h3 precipitation-info>60%</h3>
+            <h3 id="precipitationPercentage">0%</h3>
           </span>
         </div>
       </div>
