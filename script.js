@@ -11,6 +11,12 @@ const weatherIcon = document.getElementById("weatherIcon");
 
 searchBtn.addEventListener("click", () => onSearch());
 
+// For default value of weather
+getWeather("Kathmandu").then(async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  searchCity.value = "Kathmandu";
+});
+
 function updatePage(weatherData) {
   weatherMain.innerText = weatherData.weather[0].main;
   temperatureValue.innerHTML = `${weatherData.main.temp}&deg;C`;
