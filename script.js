@@ -7,6 +7,7 @@ const windSpeed = document.getElementById("windSpeed");
 const pressureValue = document.getElementById("pressureValue");
 const searchBtn = document.getElementById("searchBtn");
 const searchCity = document.getElementById("searchCity");
+const weatherIcon = document.getElementById("weatherIcon");
 
 searchBtn.addEventListener("click", () => onSearch());
 
@@ -18,6 +19,7 @@ function updatePage(weatherData) {
   humidityPercentage.innerText = `${weatherData.main.humidity} %`;
   windSpeed.innerText = `${weatherData.wind.speed} m/s`;
   pressureValue.innerText = `${weatherData.main.pressure} mm of Hg`;
+  getWeatherIcon(weatherData.weather[0].id);
 }
 
 function onSearch() {
@@ -26,6 +28,31 @@ function onSearch() {
   getWeather(city);
 }
 
+function getWeatherIcon(id) {
+  // 200 = Thunderstorm
+  // 300 = Drizzle
+  // 500 = rain
+  // 600 = snow
+  // 700 = smoke
+  // 800 = clear
+  // 801 = cloud
+
+  if (id >= 200 && id <= 299) {
+    weatherIcon.setAttribute("src", "./assets/images/strom.png");
+  } else if (id >= 300 && id <= 399) {
+    weatherIcon.setAttribute("src", "./assets/images/raining.png");
+  } else if (id >= 500 && id <= 599) {
+    weatherIcon.setAttribute("src", "./assets/images/raining.png");
+  } else if (id >= 600 && id <= 699) {
+    weatherIcon.setAttribute("src", "./assets/images/snowflake.png");
+  } else if (id >= 700 && id <= 799) {
+    weatherIcon.setAttribute("src", "./assets/images/cloud.png");
+  } else if (id == 800) {
+    weatherIcon.setAttribute("src", "./assets/images/sun.png");
+  } else if (id >= 801 && id <= 899) {
+    weatherIcon.setAttribute("src", "./assets/images/cloudy.png");
+  }
+}
 async function getWeather(location) {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=9e29402da1d0377e04d1e1503b4d8046&units=metric`
